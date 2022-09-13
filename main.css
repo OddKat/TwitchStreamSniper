@@ -4,3 +4,6 @@ body {
 iframe {
   border: none;
 }
+.video-player__overlay {
+  display: none !important;
+}
