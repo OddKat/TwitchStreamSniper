@@ -13,15 +13,10 @@ const _pKEEP_OVERLAY = "keep-overlay";
         return;
     }
 
-    renderElement(
-        createIframe(
-            urlParams.get(_pCHANNEL),
-            urlParams.has(_pKEEP_OVERLAY)
-        )
-    );
+    renderElement(createIframe(urlParams.get(_pCHANNEL)));
 })();
 
-function createIframe(channel, bKeepOverlay) {
+function createIframe(channel) {
     let iframe = document.createElement("iframe");
     iframe.id = "stream";
     iframe.setAttribute("src", _uBASE + channel + "&parent=" + _uPARENT);
